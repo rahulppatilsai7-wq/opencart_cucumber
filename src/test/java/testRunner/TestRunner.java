@@ -8,8 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 					//features= {".//Features/"},
+		            
 					features= {".//Features/login.feature"},
-		               //  features= {".//Features/AccountRegistration.feature"},
+		            //  features= {".//Features/AccountRegistration.feature"},
 					//features= {".//Features/Registration.feature"},
 		
 					//features= {".//Features/LoginDDTExcel.feature"},
