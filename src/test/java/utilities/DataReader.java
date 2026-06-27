@@ -35,6 +35,17 @@ public class DataReader {
 							case STRING:
 								currentHash.put(HeaderRow.getCell(j).getStringCellValue(), currentCell.getStringCellValue());
 							break;
+							case NUMERIC:
+						        currentHash.put(HeaderRow.getCell(j).getStringCellValue(), String.valueOf(currentCell.getNumericCellValue()));
+						        break;
+						    case BOOLEAN:
+						        currentHash.put(HeaderRow.getCell(j).getStringCellValue(), String.valueOf(currentCell.getBooleanCellValue()));
+						        break;
+						    case FORMULA:
+						        currentHash.put(HeaderRow.getCell(j).getStringCellValue(), currentCell.getCellFormula());
+						        break;
+						    default:
+						        currentHash.put(HeaderRow.getCell(j).getStringCellValue(), "");
 						}
 					}
 				mydata.add(currentHash);
